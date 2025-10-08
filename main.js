@@ -22,14 +22,22 @@ function winner(){
     {cells[i] =  document.getElementById('cell' + i ).innerHTML;
     console.log(cells)
     }
-    if ( cells[1] == cells[2] && cells[2] == cells[3] && cells[1] != ''  ){endGame(1,2,3);}
-    if ( cells[4] == cells[5] && cells[5] == cells[6] && cells[6] != ''  ) {endGame(4,5,6);}
-    if ( cells[7] == cells[8] && cells[8] == cells[9] && cells[9] != ''  ){endGame(7,8,9);}
-    if ( cells[1] == cells[4] && cells[4] == cells[7] && cells[1] != ''  ){endGame(1,4,7);}
-    if ( cells[2] == cells[5] && cells[5] == cells[8] && cells[8] != ''  ){endGame(2,5,8);}
-    if ( cells[3] == cells[6] && cells[6] == cells[9] && cells[9] != ''  ){endGame(3,6,9);}
-    if ( cells[1] == cells[5] && cells[5] == cells[9] && cells[1] != ''  ){endGame(1,5,9);}
-    if ( cells[3] == cells[5] && cells[5] == cells[7] && cells[7] != ''  ){endGame(3,5,7);}
+    if ( cells[1] == cells[2] && cells[2] == cells[3] && cells[1] != ''  )
+    {endGame(1,2,3); winnerFound=true;}
+    if ( cells[4] == cells[5] && cells[5] == cells[6] && cells[6] != ''  )
+     {endGame(4,5,6); winnerFound=true; }
+    if ( cells[7] == cells[8] && cells[8] == cells[9] && cells[9] != ''  )
+    {endGame(7,8,9); winnerFound=true;}
+    if ( cells[1] == cells[4] && cells[4] == cells[7] && cells[1] != ''  )
+    {endGame(1,4,7); winnerFound=true;}
+    if ( cells[2] == cells[5] && cells[5] == cells[8] && cells[8] != ''  )
+    {endGame(2,5,8); winnerFound=true; }
+    if ( cells[3] == cells[6] && cells[6] == cells[9] && cells[9] != ''  )
+    {endGame(3,6,9);  winnerFound=true; }
+    if ( cells[1] == cells[5] && cells[5] == cells[9] && cells[1] != ''  )
+    {endGame(1,5,9);  winnerFound=true; }
+    if ( cells[3] == cells[5] && cells[5] == cells[7] && cells[7] != ''  )
+    {endGame(3,5,7); winnerFound=true;  }
     if (winnerFound === false) {
         let full = true;
         for (let i = 1; i < 10; i++) {
